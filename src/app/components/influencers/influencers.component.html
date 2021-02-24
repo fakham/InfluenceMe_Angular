@@ -1,0 +1,13 @@
+<div class="px-8">
+    <h1 class="mb-4 text-xl font-bold text-gray-700">Influencers</h1>
+    <div class="flex flex-col bg-white max-w-sm px-6 py-4 mx-auto rounded-lg shadow-md">
+        <ul class="-mx-4">
+            <li *ngFor="let influencer of influencers" class="flex items-center mb-4" [id]="influencer.id"><img
+                    src="{{influencer.avatar}}"
+                    alt="avatar" class="w-10 h-10 object-cover rounded-full mx-4">
+                <p><a href="{{influencer.url}}" class="text-gray-700 font-bold mx-1 hover:underline">{{influencer.name}}</a><span
+                        class="text-gray-700 text-sm font-light">{{influencer.contributions}}</span></p>
+            </li>
+        </ul>
+    </div>
+</div>

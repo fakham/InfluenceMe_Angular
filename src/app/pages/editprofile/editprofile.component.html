@@ -1,0 +1,106 @@
+<app-header></app-header>
+<main class="profile-page">
+    <section class="relative block" style="height: 500px;">
+        <div class="absolute top-0 w-full h-full bg-center bg-cover"
+            style='background-image: url("https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2710&amp;q=80");'>
+            <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
+        </div>
+        <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+            style="height: 70px; transform: translateZ(0px);">
+            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+    </section>
+    <section class="relative py-16 bg-gray-300">
+        <div class="container mx-auto px-4">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
+                <div class="px-6">
+                    <div class="flex flex-wrap justify-center">
+                        <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
+                            <div class="relative">
+                                <img alt="..." src="../../../assets/img/248763.jpg"
+                                    class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
+                                    style="max-width: 150px;" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-row justify-end">
+                        <div class="w-full lg:w-1/12 px-4 lg:order-3 lg:text-right lg:self-center">
+                            <div class="py-6 px-3 mt-32 sm:mt-0">
+                                <button
+                                    class="bg-indigo-500 active:bg-bg-indigo-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1"
+                                    type="button" style="transition: all 0.15s ease 0s;">
+                                    Save
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-span-12 h-full pb-12 md:col-span-10 mt-12">
+                        <div class="px-4 pt-4">
+                          <form action="#" class="flex flex-col space-y-8">
+                  
+                            <div>
+                              <h3 class="text-2xl font-semibold">Basic Information</h3>
+                              <hr>
+                            </div>
+                  
+                            <div class="form-item">
+                              <label class="text-xl ">Full Name</label>
+                              <input type="text" value="Antonia P. Howell" class="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2  mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200" >
+                            </div>
+                  
+                            <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
+                  
+                              <div class="form-item w-full">
+                                <label class="text-xl ">Username</label>
+                                <input type="text" value="antonia" class="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2 mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200 text-opacity-25 " >
+                              </div>
+                  
+                              <div class="form-item w-full">
+                                <label class="text-xl ">Email</label>
+                                <input type="text" value="antoniaph@gmail.com" class="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2 mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200 text-opacity-25 " >
+                              </div>
+                            </div>
+                  
+                            <div>
+                              <h3 class="text-2xl font-semibold ">More About Me</h3>
+                              <hr>
+                            </div>
+                  
+                            <div class="form-item w-full">
+                              <label class="text-xl ">Biography</label>
+                              <textarea cols="30" rows="10" class="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2 mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200 text-opacity-25 " >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem natus nobis odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, eveniet fugiat? Explicabo assumenda dignissimos quisquam perspiciatis corporis sint commodi cumque rem tempora!</textarea>
+                            </div>
+                  
+                            <div>
+                              <h3 class="text-2xl font-semibold">My Social Media</h3>
+                              <hr>
+                            </div>
+                  
+                            <div class="form-item">
+                              <label class="text-xl ">Instagram</label>
+                              <input type="text" value="https://instagram.com/" class="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2 mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200 text-opacity-25 " >
+                            </div>
+                            <div class="form-item">
+                              <label class="text-xl ">Facebook</label>
+                              <input type="text" value="https://facebook.com/" class="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2 mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200 text-opacity-25 " >
+                            </div>
+                            <div class="form-item">
+                              <label class="text-xl ">Twitter</label>
+                              <input type="text" value="https://twitter.com/" class="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2  mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200  " >
+                            </div>
+                  
+                          </form>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<app-footer></app-footer>

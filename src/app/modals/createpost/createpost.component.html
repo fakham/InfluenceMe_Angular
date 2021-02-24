@@ -1,0 +1,30 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="fixed z-10 inset-0 overflow-y-auto {{this.visible ? 'visible' : 'invisible'}}">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+        </div>
+
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+        <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+            role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                <div class="editor w-full flex flex-col text-gray-800 border border-gray-300 p-4 shadow-lg">
+                    <label class="title border-gray-300 p-2 mb-4 outline-none text-center">Add Post</label>
+                    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Title" type="text">
+                    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Price" type="number">
+                    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Time per days" type="number">
+                    <textarea class="description bg-gray-100 sec p-3 h-60 border border-gray-300 outline-none" spellcheck="false" placeholder="Describtion"></textarea>
+                    
+                    <!-- icons -->
+                    <div class="icons flex text-gray-500 m-2">
+                      <div class="count ml-auto text-gray-400 text-xs font-semibold">0/300</div>
+                    </div>
+                    <!-- buttons -->
+                    <div class="buttons flex">
+                      <div class="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-auto bg-indigo-500">Post</div>
+                    </div>
+                  </div>
+        </div>
+    </div>
+</div>
