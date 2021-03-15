@@ -7,22 +7,19 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class CreatepostComponent implements OnInit {
 
-  visible: boolean = true;
-  @Output() open: EventEmitter<any> = new EventEmitter();
-  @Output() close: EventEmitter<any> = new EventEmitter();
+  visible: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggle() {
-    this.visible = !this.visible;
-    if (this.visible) {
-      this.open.emit(null);
-    } else {
-      this.close.emit(null);
-    }
+  show() {
+    this.visible = true;
+  }
+
+  hide() {
+    this.visible = false;
   }
 
 }
