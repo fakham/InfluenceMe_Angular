@@ -14,7 +14,8 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'editprofile', component: EditprofileComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'post', component: PostdetailsComponent }
+  { path: 'post/:id', component: PostdetailsComponent },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({

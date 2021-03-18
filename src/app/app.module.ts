@@ -22,6 +22,10 @@ import { PostinfoComponent } from './components/postinfo/postinfo.component';
 import { EditprofileComponent } from './pages/editprofile/editprofile.component';
 import { FormsModule } from '@angular/forms';
 import { CreatepostComponent } from './modals/createpost/createpost.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -47,7 +51,10 @@ import { CreatepostComponent } from './modals/createpost/createpost.component';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

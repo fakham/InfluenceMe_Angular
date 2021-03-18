@@ -4,24 +4,17 @@
         <div class="flex justify-between container mx-auto">
             <div class="w-full lg:w-8/12">
                 <div class="flex items-center justify-between">
-                    <h1 class="text-xl font-bold text-gray-700 md:text-2xl">Post</h1>
-                    <div>
-                        <select class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                            <option>Latest</option>
-                            <option>Last Week</option>
-                        </select>
-                    </div>
+                    <h1 class="text-xl font-bold text-gray-700 md:text-2xl">Posts</h1>
                 </div>
                 <div *ngFor="let post of posts">
                     <app-post [id]="post.id" [tag]="post.tag" [title]="post.title" [date]="post.date" [content]="post.content" [author]="post.author" [avatar]="post.avatar"></app-post>
                 </div>
-                <app-navigation></app-navigation>
             </div>
-            <div class="-mx-8 w-4/12 hidden lg:block">
+            <!-- <div class="-mx-8 w-4/12 hidden lg:block">
                 <app-influencers></app-influencers>
                 <app-categories></app-categories>
                 <app-featuredpost></app-featuredpost>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

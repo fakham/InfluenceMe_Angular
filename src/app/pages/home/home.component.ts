@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import posts from "../../../assets/data/posts.json";
+import { Router } from '@angular/router';
+import { PostsService } from 'src/app/services/posts.service';
+import { ProfileService } from 'src/app/services/profile.service';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +10,31 @@ import posts from "../../../assets/data/posts.json";
 })
 export class HomeComponent implements OnInit {
 
-  posts=posts
+  posts:Array<any>
 
-  constructor() { }
+  constructor(private postsService:PostsService, private router:Router, private profileService:ProfileService) { }
 
   ngOnInit(): void {
+    if (!localStorage.getItem('user'))
+      this.router.navigate(['/login'])
+
+    this.posts = new Array()
+
+    this.getPosts()
+  }
+
+  getPosts() {
+    this.postsService.getPosts().subscribe(
+      data => {
+        data.forEach(post => {
+          this.profileService.getByEmail(post.userId).subscribe(data => post.avatar = data['avatar'])
+          this.posts.push(post)
+        })
+        
+      },
+      erros => console.log(erros),
+      () => console.log('posts retrieved')
+    )
   }
 
 }

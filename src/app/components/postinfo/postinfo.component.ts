@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { faClock, faUsers, faDollarSign } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
@@ -11,6 +11,10 @@ export class PostinfoComponent implements OnInit {
   faClock=faClock
   faUsers=faUsers
   faDollarSign=faDollarSign
+
+  @Input() price
+  @Input() time
+  @Input() propositions
 
   constructor() { }
 

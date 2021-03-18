@@ -29,7 +29,7 @@
       </h2>
       <p class="mt-2 text-center text-sm text-gray-600">
         Or
-        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
+        <a routerLink='/login' class="font-medium text-indigo-600 hover:text-indigo-500">
           login if you already have one
         </a>
       </p>
@@ -45,6 +45,7 @@
             required
             class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
             placeholder="Full name"
+            [(ngModel)]="fullname"
           />
         </div>
         <div>
@@ -57,6 +58,7 @@
             required
             class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
             placeholder="Email address"
+            [(ngModel)]="email"
           />
         </div>
         <div>
@@ -69,6 +71,7 @@
             required
             class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
             placeholder="Password"
+            [(ngModel)]="password"
           />
         </div>
       </div>
@@ -80,6 +83,7 @@
             name="accept_terms"
             type="checkbox"
             class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+            checked
           />
           <label for="accept_terms" class="ml-2 block text-sm text-gray-900">
             Accept terms and conditions
@@ -91,6 +95,7 @@
         <button
           type="submit"
           class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          (click)='register()'
         >
           <span class="absolute left-0 inset-y-0 flex items-center pl-3">
             <!-- Heroicon name: solid/lock-closed -->

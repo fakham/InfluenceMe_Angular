@@ -11,14 +11,15 @@
             role="dialog" aria-modal="true" aria-labelledby="modal-headline">
                 <div class="editor w-full flex flex-col text-gray-800 border border-gray-300 p-4 shadow-lg">
                     <label class="title border-gray-300 p-2 mb-4 outline-none text-center">Add Post</label>
-                    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Title" type="text">
-                    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Price" type="number">
-                    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Time per days" type="number">
-                    <textarea class="description bg-gray-100 sec p-3 h-60 border border-gray-300 outline-none" spellcheck="false" placeholder="Describtion"></textarea>
+                    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Title" type="text" [(ngModel)]="title">
+                    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Tag" type="text" [(ngModel)]="tag">
+                    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Price" type="number" [(ngModel)]="price">
+                    <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Time per days" type="number" [(ngModel)]="time">
+                    <textarea class="description bg-gray-100 sec p-3 h-60 border border-gray-300 outline-none" maxlength="1000" spellcheck="false" placeholder="Describtion" [(ngModel)]="content"></textarea>
                     
                     <!-- icons -->
                     <div class="icons flex text-gray-500 m-2">
-                      <div class="count ml-auto text-gray-400 text-xs font-semibold">0/300</div>
+                      <div class="count ml-auto text-gray-400 text-xs font-semibold">{{content.length}}/1000</div>
                     </div>
                     <!-- buttons -->
                     <div class="flex flex-row justify-end">
@@ -26,7 +27,7 @@
                         <div class="btn border border-gray-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 mr-2 bg-gray-500" (click)="hide()">Cancel</div>
                       </div>
                       <div class="buttons flex">
-                        <div class="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-auto bg-indigo-500">Post</div>
+                        <div class="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-auto bg-indigo-500" (click)="addPost()">Post</div>
                       </div>
                     </div>
                   </div>
